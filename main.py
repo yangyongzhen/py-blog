@@ -236,5 +236,5 @@ if __name__=="__main__":
     #启动时加载访问量数据
     articles.getPosts()
     app.config['UPLOAD_FOLDER'] = 'posts'
-    app.run(port=8000,host="0.0.0.0",debug=False)
+    app.run(debug=True, port=os.getenv("PORT", default=5000), host='0.0.0.0')
     print("over")
